@@ -33,23 +33,24 @@ Once you've identified the problems it's time to decide how to fix them. You can
 
 Work through your issues in priority order and come up with a plan to fix them.
 
-### 2.3: Create a test database
+### 2.3: Discuss creating a test database
 
 The database we've been using so far has contained a lot of live, sensitive data. For local development and testing we want a database that is close to live but without any sensitive data.
 
-Write a script that redacts all the sensitive data that should not appear in the test environment.
+How would you go about masking/redacting the data? Would randomly generating test data based off of production statistics be any better?
 
-### 2.4: (Optional) Improve the database
+### 2.4: (Optional) Normalise the database
+
+[Database normalisation](https://en.wikipedia.org/wiki/Database_normalization) is an important topic in relational databases. While this is beyond the core scope of a _DevOps_ course it is a useful topic to be aware of.
+
+Write scripts to ensure the database adheres to **3NF**.
+
+### 2.5: (Optional) Improve the database
 
 One limitation of the current system is that each order can only contain a single product.
 
 Write an SQL script to change the database so that an individual order can contain multiple products. Your script should migrate the existing data so that previous orders aren't lost.
 
-### 2.5: (Optional) Normalise the database
-
-[Database normalisation](https://en.wikipedia.org/wiki/Database_normalization) is an important topic in relational databases. While this is beyond the core scope of a _DevOps_ course it is a useful topic to be aware of.
-
-Write scripts to ensure the database adheres to **3NF**.
 
 ## Part 3 - Choosing Databases
 
